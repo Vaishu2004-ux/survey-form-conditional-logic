@@ -26,7 +26,7 @@ survey-form-conditional-logic/ │── index.html    # Main HTML structure │
 ## 💻 How to Run the Project
 1. **Clone the repository**
 
-git clone https://github.com/your-username/survey-form-conditional-logic.git
+git clone https://github.com/Vaishu2004-ux/survey-form-conditional-logic.git
 
 2. **Navigate into the folder**
 
