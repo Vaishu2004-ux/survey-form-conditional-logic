@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form with Conditional Logic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#survey">Survey</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Our Survey</h1>
+        <p>Please fill out the survey below</p>
+    </header>
+
+    <!-- Survey Form -->
+    <section id="survey">
+        <div class="container">
+            <h2>Survey Form</h2>
+            <form id="surveyForm">
+                <!-- Question 1 -->
+                <label for="q1">Do you like coding?</label>
+                <select id="q1" name="q1" onchange="showNextQuestion('q1', 'q1-yes', 'q1-no')">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- If "Yes" is selected -->
+                <div id="q1-yes" class="hidden">
+                    <label for="q2">Which language do you prefer?</label>
+                    <select id="q2" name="q2">
+                        <option value="">Select</option>
+                        <option value="C">C</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+
+                <!-- If "No" is selected -->
+                <div id="q1-no" class="hidden">
+                    <label for="q3">What is your favorite hobby?</label>
+                    <input type="text" id="q3" name="q3">
+                </div>
+
+                <!-- Question 4 -->
+                <label for="q4">Do you prefer working remotely?</label>
+                <select id="q4" name="q4" onchange="showNextQuestion('q4', 'q4-yes', 'q4-no')">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <!-- If "Yes" is selected -->
+                <div id="q4-yes" class="hidden">
+                    <label for="q5">Why do you prefer remote work?</label>
+                    <textarea id="q5" name="q5"></textarea>
+                </div>
+
+                <!-- If "No" is selected -->
+                <div id="q4-no" class="hidden">
+                    <label for="q6">What challenges do you face with remote work?</label>
+                    <textarea id="q6" name="q6"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About This Survey</h2>
+            <p>This survey helps us understand user preferences better.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
